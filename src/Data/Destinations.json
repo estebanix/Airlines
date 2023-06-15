@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "img": "prague.jpg",
+        "country": "Czech Republic",
+        "title": "Prague",
+        "price": 150
+    },
+    {
+        "id": 2,
+        "img": "london.jpg",
+        "country": "United Kingdom",
+        "title": "London",
+        "price": 150
+    },
+    {
+        "id": 3,
+        "img": "paris.jpg",
+        "country": "France",
+        "title": "Paris",
+        "price": 150
+    },
+    {
+        "id": 4,
+        "img": "rome.jpg",
+        "country": "Italy",
+        "title": "Rome",
+        "price": 150
+    },
+    {
+        "id": 5,
+        "img": "vienna.jpg",
+        "country": "Austria",
+        "title": "Vienna",
+        "price": 150
+    },
+    {
+        "id": 6,
+        "img": "athens.jpg",
+        "country": "Greece",
+        "title": "Athens",
+        "price": 150
+    }
+]

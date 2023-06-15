@@ -1,38 +1,374 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.nav--container, .navflights--container{
+  width: 100%;
+  height: 50px;
+  background-color: #232B38;
+  display: flex;
+  align-items: center;
+}
+
+.nav--container-logo{
+  width: 11%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  margin-left: 5%;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav--container-logo img{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.nav--container ul{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 5% 0 auto;
+}
+
+.nav--container ul li{
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+
+.home-hero--container{
+  width: 100%;
+  height: 460px;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.home-hero--box{
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 8%;
+}
+
+.home-hero--box h4{
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.home-hero--box h3{
+  font-size: 2.5em;
+  font-weight: 400;
+}
+
+.bookingbox--container{
+  width: 66%;
+  height: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 1.5, 0.3);
+  position: absolute;
+  left: 17%;
+  top: 58%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5%;
+  border-radius: 3px;
+  padding: 0 25px;
+}
+
+
+.bookingbox--choose-box, .search-flight--btn{
+  width: 170px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #F4F6F8;
+  border-radius: 3px;
+  position: relative;
+}
+
+.untouchable{
   pointer-events: none;
+  opacity: 0.5; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bookingbox--choose-box .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #F4F6F8;
+  padding: 10px;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
+.bookingbox--choose-box.toogle-active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.toogle-active p{
+  margin: 5px 0;
+}
+
+.search-flight--btn{
+  background-color: #af3a38;
+  border: none;
+  color: white;
+}
+
+.destinations--container{
+  width: 100%;
   min-height: 100vh;
+  padding: 150px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.destinations--container h2{
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 35px;
+}
+
+.destinations--box{
+  width: 70%;
+  height: 580px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+.destination--minibox{
+    width: 100%;
+    height: 240px;
+    box-shadow: 0 2px 4px rgba(0, 0, 1.5, 0.3);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.destination--minibox-img{
+  width: 100%;
+  height: 45%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.flights-hero--container{
+  width: 100%;
+  height: 40vh;
+  color: #232B38;
+  font-size: 2em;
+  position: relative;
+}
+
+.flights-hero--box{
+  position: absolute;
+  top: 10%;
+  left: 7%;
+}
+
+.flights-hero--box h2{
+  font-weight: 200;
+}
+
+.flights-hero--box span{
+  color: #af3a38;
+}
+
+.flights-box--container{
+  width: 100%;
+  height: auto;
+  min-height: 53vh;
+  display: flex;
+  background-color: #F4F6F8;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flights-box--container h2{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.current-flight--box{
+  width: 60%;
+  height: 200px;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 1.5, 0.3);
+  margin: 30px 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 30% 30%;
+  grid-gap: 16px;
+  text-align: center;
+}
+
+.current-flight--box span{
+  font-weight: 700;
+}
+
+.confirm-flight--btn{
+  width: 110px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #af3a38;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.passenger-details--box{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full-submit--btn{
+  width: 110px;
+  height: 35px;
+  background-color: #af3a38;
+  border: none;
+  border-radius: 4px;
+  margin: 40px 0;
+  text-align: center;
+  align-self: center; 
+  color: white;
+  cursor: pointer;
+}
+
+.passenger-card{
+  width: 300px;
+  height: 340px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 4px;
+  padding: 40px 15px;
+}
+
+.meat--choice {
+  width: 80%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input{
+  border-radius: 4px;
+  border: 2px solid #F4F6F8;
+}
+
+.ticket-conf--container{
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: #F4F6F8;
+  text-align: center;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-conf--container h2, .ticket-conf--container h3{
+  width: auto;
+  color: rgb(172, 170, 170);
+  padding: 10px;
+  font-size: 2em;
+}
+
+.ticket-conf--box{
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 30px 0;
+}
+
+.conf--passengers{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ticket-logo{
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.error--page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 5%;
+  font-size: 1.2em;
+}
+
+.error--page img{
+  height: 70%;
+}
+
+.error--page button{
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #af3a38;
+  border: none;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
 }

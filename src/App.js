@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Tickets from './Big_Files/Tickets';
+import Flights from './Big_Files/Flights';
+import Home from './Big_Files/Home';
+import ContextProvider from './Context/Context';
+import ErrorBoundary from "./Error/ErrorBoundary";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContextProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <ErrorBoundary fallback={<div>Oops! Something went wrong.</div>}>
+              <Route path="/Flights" component={Flights} />
+              <Route path="/Tickets" component={Tickets} />
+            </ErrorBoundary>
+          </Switch>
+        </Router>
+      </ContextProvider>
     </div>
   );
 }
 
 export default App;
+
