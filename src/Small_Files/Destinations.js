@@ -9,7 +9,7 @@ export default function Destinations(){
                     <div className="destination--minibox-img" style={{backgroundImage: `url(${require(`../Images/${dat.img}`)})`}}></div>
                     <h4>{dat.country}</h4>
                     <h3>{dat.title}</h3>
-                    <p>From {dat.price}</p>
+                    <p>Fromaaa {dat.price}</p>
                 </div>
     })
     return(
