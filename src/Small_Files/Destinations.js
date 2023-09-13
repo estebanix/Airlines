@@ -9,12 +9,12 @@ export default function Destinations(){
                     <div className="destination--minibox-img" style={{backgroundImage: `url(${require(`../Images/${dat.img}`)})`}}></div>
                     <h4>{dat.country}</h4>
                     <h3>{dat.title}</h3>
-                    <p>From {dat.price}</p>
+                    <p>Fromaaa {dat.price}</p>
                 </div>
     })
     return(
         <div className="destinations--container">
-            <h2>Popular Destinations</h2>
+            <h2>Popular Destinations Flow</h2>
             <div className="destinations--box">
                 {destinations_components}
             </div>
