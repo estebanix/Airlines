@@ -14,7 +14,7 @@ export default function Destinations(){
     })
     return(
         <div className="destinations--container">
-            <h2>Popular Destinations</h2>
+            <h2>Popular Destinations Flow</h2>
             <div className="destinations--box">
                 {destinations_components}
             </div>
